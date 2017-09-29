@@ -1,9 +1,14 @@
 #ЗАДАНИЕ 3
 
-n = +prompt "Введите порядковый номер простого числа, которое надо найти:"
+checkprime = (number) -> if a[number] != 0 then a[i] = 0 for i in [number*2..n] by number
 
+n = +prompt "Введите число, до которого надо найти простые:"
 
-result = n * 10
+a = (i for i in [0..n])
 
-alert "Результат = #{result}"
+checkprime m for m in [2..n]
+
+result = (a[i] for i in [2..n] when a[i] != 0)
+
+alert "Список простых чисел от 2 до #{n}: #{result}"
 
