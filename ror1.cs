@@ -1,18 +1,14 @@
-#ЗАДАНИЕ 1
-sum = (a, b) -> a + b
+#ЗАДАНИЕ 3
 
-#ЗАДАНИЕ 2
-weekday = (date) ->
-  WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-  day = date.getDay()
-  WEEKDAYS[day-1]
+checkprime = (number) -> if a[number] != 0 then a[i] = 0 for i in [number*2..n] by number
 
-#ТЕСТ ЗАДАНИЯ 1
-a = +prompt "enter number a"
-b = +prompt "enter number b"
-alert "Сумма будет = #{sum(a,b)}"
+n = +prompt "Введите число, до которого надо найти простые:"
 
-#ТЕСТ ЗАДАНИЯ 2
-today = new Date
-alert "Сегодня: #{today}, а день недели #{weekday(today)}"
+a = (i for i in [0..n])
+
+checkprime m for m in [2..n]
+
+result = (a[i] for i in [2..n] when a[i] != 0)
+
+alert "Список простых чисел от 2 до #{n}: #{result}"
 
